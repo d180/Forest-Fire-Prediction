@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Fire Prevention</title>
+    <link href="{{ url_for('static',filename='style/style_contact.css') }}" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about_us">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <strong><h1 align="center" class="phone"><u> Contact Us </u></h1></strong>
+    
+    <div class="con" style="padding: 100px;">
+        <div class="contact-box">
+        <form>
+            <input type="text" class="input-field" placeholder="Your Name">
+            <input type="email" class="input-field" placeholder="Your Email">
+            <textarea type="text" class="input-field textarea-field" placeholder="Message/Suggestion/Feedback"></textarea>
+            <div class="subtn"><button type="button" class="sendbtn">Send</button></div>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

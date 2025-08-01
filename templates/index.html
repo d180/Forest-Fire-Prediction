@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Fire Prevention</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/style_index.css') }}" />
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBuXmyxBnu_gqGJobPNq5lVoaU3bofWxg&callback=initMap"></script>
+    <!-- <link rel="stylesheet" href="../style_index.css"> -->
+
+    <script defer>
+function initMap() {
+        // Define the boundaries of India
+        var indiaBounds = new google.maps.LatLngBounds(
+            new google.maps.LatLng(8.0676, 68.1766), // Southwest corner
+            new google.maps.LatLng(37.0842, 97.3956) // Northeast corner
+        );
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: 20.5937, lng: 78.9629}, // Center of India
+            zoom: 5,
+            restriction: {
+                latLngBounds: indiaBounds,
+                strictBounds: true
+            }
+        });
+
+        // Add a click listener to the map
+        map.addListener('click', function(event) {
+            // Get the latitude and longitude of the clicked location
+            var latitude = event.latLng.lat();
+            var longitude = event.latLng.lng();
+
+            document.getElementById('latitude').value = latitude
+            document.getElementById('longitude').value = longitude
+
+        });
+    }
+    </script>
+</head>
+<!-- <body background="{{ url_for('static',filename='img/forest-fire.jpg') }}"> -->
+    <body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about_us">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="tagline">
+            <strong><h1 align="center">Forest Fire Prediction</h1></strong>
+        </div>
+        <div id="map"></div>
+        <div class="wrap">
+        
+            <form action="/predict" method="post" class="form">
+                <label>Latitude</label>
+                <input type="text" name="latitude" id="latitude" placeholder="latitude">
+                <br>
+                <br>
+                <label>Longitude</label>
+                <input type="text" name="longitude" id="longitude" placeholder="longitude">
+                <br>
+                <br>
+                <input type="submit" class="btn">
+            </form>
+    
+        </div>
+
+        <div id="map"></div>
+        
+       
+        <div class="fin" style="padding-top: 10px;">
+        <div class="last" style="margin-left: 200px; margin-right: 200px;">
+            <div class="las" style="margin-left: 100px; margin-top: -500px;">
+            {{pred}}
+            </div>
+        </div>
+    </div>
+    </header>
+</body>
+</html>

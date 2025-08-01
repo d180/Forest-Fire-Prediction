@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <title>Forest Fire Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/style_about.css') }}" />
+</head>
+<style>
+    .navbar{
+    background-color:black;
+    border-radius: 30px;
+ }
+ .navbar ul{
+    overflow:auto;
+ }
+ .navbar li{
+    float:left;
+    list-style:none;
+    margin: 13px 20px;
+ }
+ .navbar li a{
+    font-size:20px;
+    padding: 3px 3px;
+    text-decoration: none;
+    color:white;
+ }
+
+ .navbar li a:hover{
+    color:cyan;
+ }
+body{
+    background-color: antiquewhite;
+ }
+
+.section{
+font-family: 'Poppins', sans-serif;
+box-sizing: border-box;
+width: 100%;
+min-height: 1vh;
+background-color: antiquewhite;
+}
+
+.container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+footer{
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: "open Sans";
+    padding-top: 0px;
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 0rem
+}
+
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 1px;
+    font-size: 16px;
+}
+
+.social{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0 1rem 0;
+}
+
+.social li{
+    margin: 0 30px;    
+}
+
+.social a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.social a i{
+    font-size: 2.1rem;
+}
+
+.social a:hover i{
+    color: rgb(255, 1, 44);
+}
+
+.footer-bottom{
+    background: #000;
+    width: 100vw;
+    padding: 10px 0;
+    text-align: center;
+
+}
+
+.footer-bottom p{
+    font-size: 14px;
+    word-spacing: 4px;
+    text-transform: capitalize;
+}
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about_us">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="section">
+        <div class="container">
+            <div class="content-section">
+                <h1 align="center"><u> About Us </u></h1>
+            </div>
+            <div class="content" style="margin-top: 100px;">
+                <h3>"Student With Significant Experience In PubG. <br>During my studies I have created 10+ ML projects. <br> I have compeleted 15+ Courses & Training Certifications."
+                </h3>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content" style="margin-top: 150px;">
+            <h3>Forest Fire Prevention</h3>
+            <p>Hello! Connect With Us</p>
+            <ul class="social">
+                <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                <li><a href=""><i class="fab fa-github"></i></a></li>
+                <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+                <li><a href=""><i class="fab fa-twitter"></i></a></li>
+            
+            </ul>
+        </div>
+        <div class="last">
+        <div class="footer-bottom">
+            <p>copyright &copy;2023 BISAG gang</p>
+        </div>
+    </div>
+    </footer>
+
+
+</body>
+</html>
